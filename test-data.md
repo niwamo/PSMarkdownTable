@@ -1,0 +1,8 @@
+| name        | link                                                   | description                                                                                              |
+| ----------- | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| ngrok       | [link](https://ngrok.com/docs)                         | expose private resources via publicly accessible tunnel endpoint                                         |
+| gobuster    | [link](https://github.com/OJ/gobuster)                 | brute force URIs, DNS subdomains, virtual hostnames on webservers, S3 buckets, GCP buckets, TFTP servers |
+| DNSRecon.py | [link](https://github.com/darkoperator/dnsrecon)       | Enumerate all record types for a domain, brute force subdomains, PTR lookups + crt.sh CTR logs           |
+| shuffledns  | [link](https://github.com/projectdiscovery/shuffledns) | Very fast, but very limited DNS brute forcing                                                            |
+| masscan     | [link](https://github.com/robertdavidgraham/masscan)   | Very fast SYN packet port scanner                                                                        |
+| nmap        | [link](https://nmap.org/)                              | Gold standard port scanner. Leverage NSE scripts for vulnerability scanning too                          |

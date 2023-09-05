@@ -1,0 +1,57 @@
+[
+    {
+        "cmd":  "ngrok http <port>",
+        "description":  "exposes local [port] using ngrok http tunnel",
+        "tool":  "ngrok"
+    },
+    {
+        "cmd":  "ngrok tcp --region=use <port>",
+        "description":  "exposes local [port] using ngrok tcp tunnel, specifies tunnel endpoint region",
+        "tool":  "ngrok"
+    },
+    {
+        "cmd":  "ngrok tcp <ip>:<port>",
+        "description":  "exposes remote [port] on [ip] using ngrok tcp tunnel",
+        "tool":  "ngrok"
+    },
+    {
+        "cmd":  "ssh -R 80:localhost:80 tunnel.us.ngrok.com http",
+        "description":  "uses an ssh tunnel to the ngrok cloud to expose local port 80 using an ngrok http tunnel",
+        "tool":  "ngrok"
+    },
+    {
+        "cmd":  "python3 -m http.server 9999",
+        "description":  "run a web server from the current directory on port 9999",
+        "tool":  "python"
+    },
+    {
+        "cmd":  "gobuster dns -d <domain> -w <wordlist> --wildcard -r 1.1.1.1",
+        "description":  "brute force subdomains for the specified domain using the specified wordlist and resolver. Continue scanning even if a wildcard is found",
+        "tool":  "gobuster"
+    },
+    {
+        "cmd":  "gobuster dir -u <baseURL> -w <wordlist>",
+        "description":  "brute force dirs or paths on the given baseURL",
+        "tool":  "gobuster"
+    },
+    {
+        "cmd":  "gobuster fuzz -u <URI> -w <wordlist>",
+        "description":  "Fuzz a parameter in a URI. URI must containFUZZ in the place you want gobuster to inject words",
+        "tool":  "gobuster"
+    },
+    {
+        "cmd":  "gobuster s3 -w <buckets> -p <patterns>",
+        "description":  "Search for and list open buckets. Combination of -w and -p inserts wordlist into patterns",
+        "tool":  "gobuster"
+    },
+    {
+        "cmd":  "dnsrecon.py -t brt,crt -d <domain> -D <hostlist> --iw --threads <n>",
+        "description":  "Brute force subdomains using CTR logs. Don't try wildcards",
+        "tool":  "DNSRecon"
+    },
+    {
+        "cmd":  "masscan <ip/range> <port or range>",
+        "description":  "Port scan. Can specify UDP ports with U:[port]",
+        "tool":  "masscan"
+    }
+]
