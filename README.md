@@ -2,7 +2,10 @@
 
 ## Purpose
 
-Simple utility module for: 
+Simple utility module for serializing and de-serializing PowerShell objects - specifically, arrays
+of hash tables - into Markdown tables. 
+
+In other words:
 1. converting Markdown tables (input as a string or array of strings) to PowerShell objects
 2. converting PowerShell objects into Markdown tables
 

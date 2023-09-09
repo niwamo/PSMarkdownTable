@@ -1,6 +1,9 @@
 function ConvertFrom-MdTable {
     param (
-        [Parameter(Mandatory)]$InputObject
+        [Parameter(
+            Mandatory = $true,
+            ValueFromPipeline = $true
+        )]$InputObject
     )
 
     # get fields from each row
@@ -53,7 +56,10 @@ function ConvertFrom-MdTable {
 
 function ConvertTo-MdTable {
     param (
-        [Parameter(Mandatory)]$InputObject
+        [Parameter(
+            Mandatory = $true,
+            ValueFromPipeline = $true
+        )]$InputObject
     )
     # TODO: Input Validation
     $pTable = $InputObject | ForEach-Object {[PSCustomObject]$_} | Format-Table | Out-String
