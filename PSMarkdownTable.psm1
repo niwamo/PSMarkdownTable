@@ -106,8 +106,8 @@ function ConvertTo-MdTable {
         # leverage format-table to get us 90% of the way there
         $pTable = $all | Format-Table -Property * -Expand Both -AutoSize | Out-String -Width $length
         $rows = @($pTable.trim("`r`n") -split "`r`n|`n")
-        $headers = $rows[0]
-        $columnIndices = (@(0, ($headers.length)) + [regex]::Matches($headers, '(?<=\s)\S').Index) | Sort-Object
+        $underlines = $rows[1]
+        $columnIndices = (@(0, ($underlines.length)) + [regex]::Matches($underlines, '(?<=\s)\S').Index) | Sort-Object
         $numfields = $columnIndices.length - 1
         $outStrings = @()
         foreach ($idx in 0..($rows.length - 1)) {
